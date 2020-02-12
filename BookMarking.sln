@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMarking.WebApi", "BookMarking.WebApi\BookMarking.WebApi.csproj", "{91357D67-5BF7-4FB3-9B2A-C2E19CD16078}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BookMarking.Web", "BookMarking.Web", "{5D0E80E0-05DB-496D-95A2-59562471BE5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMarking.Service", "BookMarking.Service\BookMarking.Service.csproj", "{AFE8932C-E67A-461D-BDB0-AD3965271D30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6A232CDE-BA8E-4F6F-A23E-7A7D47FE263A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMarking.Data", "BookMarking.Data\BookMarking.Data.csproj", "{1C1B53B3-6068-43AF-B1E3-09649232DBEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMarking.Redis", "BookMarking.Redis\BookMarking.Redis.csproj", "{960112BD-CDC9-404E-955D-BEE2D7101854}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMarking.Lucene", "BookMarking.Lucene\BookMarking.Lucene.csproj", "{46C4BB65-F4FB-4DC0-9761-C45287DB71A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A2D48B97-BCF6-49AF-92AC-D88B5C21B959}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMarking.Common", "BookMarking.Common\BookMarking.Common.csproj", "{7997F975-7B05-4EF6-BC85-C0C9DFEC8175}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{3BD21E5F-26AF-4039-A983-24755AA3EF06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91357D67-5BF7-4FB3-9B2A-C2E19CD16078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91357D67-5BF7-4FB3-9B2A-C2E19CD16078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91357D67-5BF7-4FB3-9B2A-C2E19CD16078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91357D67-5BF7-4FB3-9B2A-C2E19CD16078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFE8932C-E67A-461D-BDB0-AD3965271D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFE8932C-E67A-461D-BDB0-AD3965271D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFE8932C-E67A-461D-BDB0-AD3965271D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFE8932C-E67A-461D-BDB0-AD3965271D30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C1B53B3-6068-43AF-B1E3-09649232DBEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1B53B3-6068-43AF-B1E3-09649232DBEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1B53B3-6068-43AF-B1E3-09649232DBEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1B53B3-6068-43AF-B1E3-09649232DBEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{960112BD-CDC9-404E-955D-BEE2D7101854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{960112BD-CDC9-404E-955D-BEE2D7101854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{960112BD-CDC9-404E-955D-BEE2D7101854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{960112BD-CDC9-404E-955D-BEE2D7101854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46C4BB65-F4FB-4DC0-9761-C45287DB71A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46C4BB65-F4FB-4DC0-9761-C45287DB71A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46C4BB65-F4FB-4DC0-9761-C45287DB71A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46C4BB65-F4FB-4DC0-9761-C45287DB71A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7997F975-7B05-4EF6-BC85-C0C9DFEC8175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7997F975-7B05-4EF6-BC85-C0C9DFEC8175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7997F975-7B05-4EF6-BC85-C0C9DFEC8175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7997F975-7B05-4EF6-BC85-C0C9DFEC8175}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AFE8932C-E67A-461D-BDB0-AD3965271D30} = {3BD21E5F-26AF-4039-A983-24755AA3EF06}
+		{1C1B53B3-6068-43AF-B1E3-09649232DBEB} = {6A232CDE-BA8E-4F6F-A23E-7A7D47FE263A}
+		{960112BD-CDC9-404E-955D-BEE2D7101854} = {6A232CDE-BA8E-4F6F-A23E-7A7D47FE263A}
+		{46C4BB65-F4FB-4DC0-9761-C45287DB71A3} = {6A232CDE-BA8E-4F6F-A23E-7A7D47FE263A}
+		{7997F975-7B05-4EF6-BC85-C0C9DFEC8175} = {A2D48B97-BCF6-49AF-92AC-D88B5C21B959}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {566D59DB-887D-47CA-A8F5-C208B488365C}
+	EndGlobalSection
+EndGlobal
