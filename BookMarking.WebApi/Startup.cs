@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookMarking.Common.Log;
+using BookMarking.Common.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +19,7 @@ namespace BookMarking.WebApi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            Log4NetConfig.Init(Configuration);//加载log4net
         }
 
         public IConfiguration Configuration { get; }
@@ -34,6 +37,8 @@ namespace BookMarking.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseMiddleware<GlobalExceptionMiddleWare>();//捕捉全局异常的自定义中间件
 
             app.UseRouting();
 

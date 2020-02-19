@@ -4,5 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BookMarking.Common\BookMarking.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\Error\" />
+    <Folder Include="Logs\Info\" />
+  </ItemGroup>
+
 
 </Project>

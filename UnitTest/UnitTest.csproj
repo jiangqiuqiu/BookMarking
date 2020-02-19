@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BookMarking.Common\BookMarking.Common.csproj" />
     <ProjectReference Include="..\BookMarking.Data\BookMarking.Data.csproj" />
   </ItemGroup>
 

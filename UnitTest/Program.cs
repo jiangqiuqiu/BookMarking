@@ -1,6 +1,8 @@
-﻿using BookMarking.Data.Biz;
+﻿using BookMarking.Common.Log;
+using BookMarking.Data.Biz;
 using BookMarking.Data.Dal.Domain;
 using DapperExtensions;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 
@@ -23,6 +25,7 @@ namespace UnitTest
             var pgCount = new PredicateGroup { Operator = GroupOperator.And, Predicates = new List<IPredicate>() };
             pgCount.Predicates.Add(Predicates.Field<TUser>(f => f.UserId, Operator.Eq, null, not: true));
             var count = TUserBiz.Instance.Count<TUser>(pgCount);
+
         }
     }
 }
