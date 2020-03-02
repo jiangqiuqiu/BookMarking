@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace BookMarking.WebApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -26,6 +26,7 @@ namespace BookMarking.WebApi.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            //throw new Exception("测试测试测试");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -34,8 +35,13 @@ namespace BookMarking.WebApi.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
 
-           
+        [HttpPost]
+        public IActionResult AddUser([FromBody]User user)
+        {
+            string ddd = user.Address;
+            return Ok(user);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using BookMarking.Common.Log;
+﻿using BookMarking.Common.ApiModels;
+using BookMarking.Common.Log;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System;
@@ -48,19 +49,7 @@ namespace BookMarking.Common.Middlewares
                 response.StatusCode = (int)HttpStatusCode.BadRequest;
             
             response.ContentType = "application/json";
-            await response.WriteAsync(JsonConvert.SerializeObject(new ResultMsg(response.StatusCode.ToString(),exception.GetBaseException().Message))).ConfigureAwait(false);
+            await response.WriteAsync(JsonConvert.SerializeObject(new CustomExceptionResultModel(response.StatusCode,exception.GetBaseException()))).ConfigureAwait(false);
         }
-    }
-
-    public class ResultMsg
-    {
-        public string code { get; set; }
-        public string message { get; set; }
-        public ResultMsg(string code="",string message="")
-        {
-            this.code = code;
-            this.message = message;
-        }
-       
     }
 }
