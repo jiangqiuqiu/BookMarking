@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Autofac;
 using BookMarking.Common.ApiModels;
+using BookMarking.Common.AutoFac;
 using BookMarking.Common.Extensions;
 using BookMarking.Common.Filters;
 using BookMarking.Common.Log;
@@ -13,8 +11,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using Microsoft.OpenApi.Models;
 using System.IO;
 
@@ -35,7 +31,9 @@ namespace BookMarking.WebApi
         {
             services.AddControllers(options=> {
                 options.Filters.Add<ApiResultFilterAttribute>();
-            });
+            }).AddJsonOptions(options => { //解决.net core 后台返回结果到前台变小写的问题
+                options.JsonSerializerOptions.PropertyNamingPolicy = null;
+            }); 
 
             //参数验证
             services.Configure<ApiBehaviorOptions>(options =>
@@ -108,5 +106,12 @@ namespace BookMarking.WebApi
                 endpoints.MapControllers();
             });
         }
+
+        //使用AutoFac做DI容器
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule<BMAutoFacModule>();
+        }
+
     }
 }

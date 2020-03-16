@@ -21,6 +21,10 @@ namespace BookMarking.Data.Base
             DBSession = DBHelper.CreateDBSession(conn,databaseType);
         }
 
+        public void SetDBSession(IDBSession dbSession)
+        {
+            DBSession = dbSession;
+        }
         #region 查询
 
 
