@@ -25,9 +25,8 @@ namespace BookMarking.Common.ApiModels
 
     public enum ReturnStatus
     {
-        Success = 1,
-        Fail = 0,
-        ConfirmIsContinue = 2,
-        Error = 3
+        Success = 0,
+        Fail = 1,
+        Error = 2
     }
 }

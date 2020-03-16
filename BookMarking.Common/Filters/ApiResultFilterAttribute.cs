@@ -22,8 +22,16 @@ namespace BookMarking.Common.Filters
                 context.Result = new OkObjectResult(objectResult.Value);
             }
             else
-            {                
-                context.Result = new OkObjectResult(new BaseResultModel(Code: 200, Result: objectResult.Value));
+            {
+                if (objectResult.StatusCode == null || objectResult.StatusCode == 200)
+                {
+                    context.Result = new OkObjectResult(new BaseResultModel(Code: 200, Result: objectResult.Value));
+                }
+                else
+                {
+                    BaseResultModel baseResultModel = objectResult.Value as BaseResultModel;
+                    context.Result = new OkObjectResult(new BaseResultModel(Code: baseResultModel.Code, Message: baseResultModel.Message, Result: baseResultModel.Result, ReturnStatus: baseResultModel.ReturnStatus));
+                }
             }
 
         }
